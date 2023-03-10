@@ -4,6 +4,29 @@
   min-height: 100vh;
 }
 
+.main {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 1px solid #000;
+  width: 40%;
+}
+
+.meme {
+  width: 100%;
+  height: 100%;
+}
+
+.meme > * {
+  cursor: pointer;
+}
+
 .meme__img {
   width: 30rem;
+  display: none;
+}
+
+input:checked ~ .meme__img {
+  display: block;
 }
