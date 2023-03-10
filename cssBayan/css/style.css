@@ -2,15 +2,15 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
+  font-family: sans-serif;
 }
 
 .main {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  border: 1px solid #000;
-  width: 40%;
+  width: 30%;
 }
 
 .main__container:hover > .meme {
@@ -37,6 +37,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border-top: 0.02rem solid #8d8d8d;
 }
 
 .meme label {
@@ -52,9 +53,15 @@
   width: 5%;
 }
 
+.meme__wrapper {
+  width: 100%;
+  max-height: 0;
+  transition: 1s all;
+  overflow: hidden;
+}
+
 .meme__img {
-  width: 30rem;
-  display: none;
+  width: 100%;
 }
 
 input {
@@ -63,8 +70,8 @@ input {
   z-index: -1;
 }
 
-input:checked ~ .meme__img {
-  display: block;
+input:checked ~ .meme__wrapper {
+  max-height: 100vh;
 }
 
 input:checked ~ .meme__arrow {
@@ -73,11 +80,14 @@ input:checked ~ .meme__arrow {
   filter: invert(60%);
 }
 
+input:not(:checked) ~ .meme__wrapper {
+  transition: 0.3s all;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+}
+
 input:not(:checked) ~ .meme__arrow {
   transition: 0.3s all;
   transform: rotate(0deg);
-}
-
-.meme__container ~ * {
-  opacity: 1;
 }
