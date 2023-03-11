@@ -7,10 +7,10 @@
 
 .main {
   position: absolute;
-  top: 5%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 30%;
+  width: 30rem;
 }
 
 .main__container:hover > .meme {
@@ -80,7 +80,7 @@ input {
 }
 
 input:active {
-  background-color: #ffcccc;
+  background-color: #ffffff;
   opacity: 0.3;
 }
 
