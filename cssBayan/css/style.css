@@ -79,14 +79,17 @@
 
 .meme label:active {
   color: #8e8eff;
+  transition: 0s all;
 }
 
 .meme label:active .meme__arrow {
   opacity: 0.5;
+  transition: 0s all;
 }
 
 .meme label:active .meme__wrapper {
   opacity: 0.8;
+  transition: 0s all;
 }
 
 /* wrapper and img */
